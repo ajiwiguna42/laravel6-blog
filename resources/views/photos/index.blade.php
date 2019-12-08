@@ -10,11 +10,11 @@
           <img src="{{ asset($photo->url) }}" class="card-img-top">
             <div class="card-body">
               <h1>{{ $photo -> title }}</h1>
-              <p class="card-text">{!! $photo -> description !!}</p>
+              <p class="card-text">{!! Str::limit($photo -> description, 100) !!}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="{{ route('photo.show', $photo->id) }}" class="btn btn-sm btn-outline-secondary">View</a>
-                  <a href="" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <a href="" class="btn btn-sm btn-outline-secondary">Edit</a>
                 </div>
                 <small class="text-muted">{{ $photo->created_at->diffForHumans() }}</small>
               </div>
