@@ -24,4 +24,8 @@
         </div>
 </div>
 
+@include('photos.comments.create')
+
+@include('photos.comments.index')
+
 @endsection

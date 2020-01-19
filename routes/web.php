@@ -25,3 +25,4 @@ Route::get('contact', function(){
 
 Route::get('photos','PhotoController@index')->name("photo.index");
 Route::get('photos/{id}','PhotoController@show')->name("photo.show");
+Route::post('photos/{id}/comment', 'PhotoController@storeComment')->name('photos.storeComment');
